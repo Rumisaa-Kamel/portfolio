@@ -1,0 +1,201 @@
+
+
+/* =======================================================
+   ✅ Light / Dark Theme Variables
+   ======================================================= */
+:root {
+  --bg-color: #fff6fa;
+  --text-color: #3a2a4f;
+  --secondary-text: #5a476a;
+  --accent-color: #d67fff;
+  --accent-hover: #ffb6d9;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border-color: rgba(214, 127, 255, 0.25);
+  --shadow-color: rgba(214, 127, 255, 0.2);
+  --section-bg: linear-gradient(180deg, #fff5fb, #f8e9ff);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a0f1f;
+  --text-color: #ffffff;
+  --secondary-text: #cccccc;
+  --accent-color: #ffb6d9;
+  --accent-hover: #d67fff;
+  --card-bg: rgba(30, 30, 45, 0.85);
+  --border-color: rgba(255, 182, 217, 0.25);
+  --shadow-color: rgba(255, 182, 217, 0.2);
+  --section-bg: linear-gradient(180deg, #141a2b, #1f263b);
+}
+
+
+/* =======================================================
+   ✅ Section
+   ======================================================= */
+.projects-section {
+  padding: 100px 20px;
+  background: var(--section-bg);
+  text-align: center;
+  transition: 0.35s ease-in-out;
+}
+
+.projects-title {
+  font-size: 40px;
+  font-weight: 750;
+  color: var(--accent-color);
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(214, 127, 255, 0.3);
+}
+
+
+/* =======================================================
+   ✅ Cards Layout
+   ======================================================= */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  flex: 0 0 calc(25% - 20px);
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 18px var(--shadow-color);
+  position: relative;
+  backdrop-filter: blur(8px);
+  transition: 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+
+/* =======================================================
+   ✅ Title + Tech Icons
+   ======================================================= */
+.project-name {
+  font-size: 20px;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.project-tech {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tech-icon {
+  font-size: 22px;
+  color: var(--accent-color);
+}
+
+
+/* =======================================================
+   ✅ Description
+   ======================================================= */
+.project-desc {
+  color: var(--secondary-text);
+  font-size: 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+
+/* =======================================================
+   ✅ Image Slider
+   ======================================================= */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* ✅ الصور – تظهر كاملة بدون قص */
+.slider-container img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ✅ الصورة الظاهرة */
+.slider-container img.active {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =======================================================
+   ✅ Dots
+   ======================================================= */
+.dots {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.active-dot {
+  background: var(--accent-color);
+  transform: scale(1.25);
+}
+
+
+/* =======================================================
+   ✅ Responsive Design
+   ======================================================= */
+
+@media (max-width: 992px) {
+  .project-card {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+
+  .slider-container img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  .slider-container img {
+    height: 160px;
+  }
+}

@@ -1,0 +1,96 @@
+/* =======================================================
+   ✅ Navbar (Uses Only Global Theme Variables)
+======================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(18px);
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* Wrapper */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 60px;
+}
+
+/* Logo */
+.logo {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  font-size: 22px;
+  transition: 0.25s ease;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* Theme + Button Area */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Toggle (Icon Button) */
+.theme-toggle {
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--accent-color);
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Let's Talk Button */
+.talk-btn {
+  background: var(--accent-color);
+  padding: 9px 18px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.25s;
+  text-decoration: none;
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.talk-btn:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 18px var(--shadow-color);
+}

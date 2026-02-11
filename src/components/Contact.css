@@ -1,0 +1,137 @@
+/* =======================================================
+   ✅ Contact Section (Uses Global Theme Variables Only)
+======================================================= */
+
+.contact-section {
+  padding: 100px 20px;
+  background: var(--section-bg);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Title */
+.contact-title {
+  font-size: 40px;
+  font-weight: 750;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  margin-top: 1px;
+  letter-spacing: 2px;
+}
+
+/* Subtitle */
+.contact-subtext {
+  color: var(--secondary-text);
+  font-size: 16px;
+  margin-bottom: 38px;
+}
+
+/* Contact Card */
+.contact-card {
+  width: 90%;
+  max-width: 600px;
+  height: 540px;
+  margin: auto;
+  padding: 35px 25px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 25px var(--shadow-color);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, transform 0.35s ease;
+}
+
+/* Glow Layer */
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px var(--accent-color);
+  opacity: 0.6;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-card:hover::before {
+  box-shadow: 0 0 30px var(--accent-color);
+  opacity: 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 12px var(--shadow-color);
+}
+
+/* Send Button */
+.send-btn {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+  color: #fff;
+  padding: 14px 22px;
+  margin-top: 25px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 0 18px var(--shadow-color);
+}
+
+.send-btn .send-icon {
+  width: 22px;
+  height: 22px;
+  transition: 0.25s;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px var(--shadow-color);
+  background: linear-gradient(90deg, var(--accent-hover), var(--accent-color));
+}
+
+.send-btn:hover .send-icon {
+  transform: translateX(6px) translateY(-2px) rotate(15deg);
+}

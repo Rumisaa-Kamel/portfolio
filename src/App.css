@@ -1,0 +1,120 @@
+
+/* =======================================================
+   ✨ General App Styles
+   ======================================================= */
+
+.app {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+
+/* لضبط المسافة لو الـNavbar ثابت */
+.page-wrapper {
+  padding-top: 90px;
+}
+
+/* =======================================================
+   🌗 Light / Dark Theme Variables
+   ======================================================= */
+:root {
+  --bg-color: #fff6fa;               /* خلفية وردية ناعمة */
+  --text-color: #3a2a4f;             /* بنفسجي غامق */
+  --secondary-text: #5a476a;
+  --accent-color: #d67fff;           /* بنفسجي وردي */
+  --accent-hover: #ffb6d9;           /* وردي فاتح */
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(214, 127, 255, 0.25);
+  --shadow-color: rgba(214, 127, 255, 0.25);
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --footer-bg: #fff6fa;
+  --section-bg: linear-gradient(180deg, #fff5fb, #f8e9ff);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a0f1f;               /* خلفية داكنة */
+  --text-color: #ffffff;
+  --secondary-text: #cccccc;
+  --accent-color: #ffb6d9;
+  --accent-hover: #d67fff;
+  --card-bg: rgba(30, 30, 45, 0.8);
+  --border-color: rgba(255, 182, 217, 0.25);
+  --shadow-color: rgba(255, 182, 217, 0.2);
+  --navbar-bg: rgba(20, 20, 35, 0.85);
+  --footer-bg: #141a2b;
+  --section-bg: linear-gradient(180deg, #141a2b, #1f263b);
+}
+
+/* =======================================================
+   🎨 Scrollbar Styling (جميل في الفاتح والغامق)
+   ======================================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* =======================================================
+   💡 Universal Elements
+   ======================================================= */
+
+/* الأزرار العامة */
+button {
+  font-family: inherit;
+  transition: 0.3s ease;
+}
+
+/* الروابط */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* العناوين */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* النصوص */
+p, span, label {
+  color: var(--secondary-text);
+  transition: color 0.3s ease;
+}
+
+/* الكروت */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 18px var(--shadow-color);
+  border-radius: 18px;
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+/* =======================================================
+   🩵 Smooth Theme Transition
+   ======================================================= */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+

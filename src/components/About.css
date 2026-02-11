@@ -1,0 +1,105 @@
+/* ============================= */
+/* ✅ About Section (Unified with Global Theme Variables) */
+/* ============================= */
+
+.about {
+  padding: 110px 0;
+  display: flex;
+  justify-content: center;
+  background: var(--section-bg);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-container {
+  width: 85%;
+  max-width: 1250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* === Image === */
+.about-img {
+  position: relative;
+}
+
+.about-img img {
+  width: 430px;
+  height: 400px;
+  border-radius: 40%;
+  border: 4px solid var(--border-color);
+  box-shadow: 0 0 30px var(--shadow-color);
+  position: relative;
+  z-index: 2;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  animation: moveDown 4s ease-in-out infinite;
+}
+
+.about-glow {
+  width: 500px;
+  height: 500px;
+  background: var(--shadow-color);
+  filter: blur(130px);
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: -20%;
+  z-index: 1;
+  opacity: 0.55;
+  transition: background 0.3s ease;
+}
+
+/* === Text Area === */
+.about-content {
+  max-width: 550px;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.about-title span {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--shadow-color);
+}
+
+.about-text {
+  font-size: 17px;
+  opacity: 0.9;
+  color: var(--secondary-text);
+  margin: 15px 0 25px;
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+/* === View More Button === */
+.view-more {
+  all: unset;
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px var(--shadow-color);
+}
+
+.view-more:hover {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--shadow-color);
+}
+
+

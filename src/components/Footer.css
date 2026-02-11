@@ -1,0 +1,77 @@
+/* =======================================================  
+   ✅ Footer (Uses Global Theme Variables Only)
+======================================================= */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  flex-wrap: nowrap;
+  background: var(--bg-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Right Side (Policy Links) */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-policies {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.footer-policies a {
+  color: var(--secondary-text);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-policies a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--shadow-color);
+}
+
+/* ✅ Social Icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 25px;
+}
+
+.footer-socials a {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-hover);
+  transform: scale(1.3);
+  text-shadow: 0 0 10px var(--shadow-color);
+}
+
+/* ✅ Copyright */
+.footer-bottom {
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+.footer-name {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--shadow-color);
+}
+
+/* ✅ Mobile */
+@media(max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

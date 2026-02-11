@@ -1,0 +1,147 @@
+/* =======================================================
+   ✅ Light / Dark Theme Support 
+   ======================================================= */
+
+/* :root { */
+  /* 🌞 Light Theme */
+  /* --bg-color: #fff6fa;
+  --text-color: #3a2a4f;
+  --accent-color: #d67fff;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(214, 127, 255, 0.3);
+  --section-bg: linear-gradient(180deg, #fff5fb, #f8e9ff);
+} */
+
+/* [data-theme="dark"] { */
+  /* 🌙 Dark Theme */
+  /* --bg-color: #0a0f1f;
+  --text-color: #ffffff;
+  --accent-color: #ffb6d9;
+  --card-bg: rgba(30, 30, 45, 0.7);
+  --border-color: rgba(255, 182, 217, 0.2);
+  --section-bg: linear-gradient(180deg, #141a2b, #1f263b);
+} */
+
+/* =======================================================
+   ✅ Section (Themed)
+   ======================================================= */
+
+.skills {
+  padding: 100px 0;
+  text-align: center;
+  background: var(--section-bg);
+  transition: 0.4s ease-in-out;
+}
+
+.skills-subtitle {
+  font-size: 40px;
+  font-weight: 750;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.skills-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--text-color);
+  max-width: 750px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =======================================================
+   ✅ Grid Layout — 5 cards per row on desktop
+   ======================================================= */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  flex: 0 0 calc(20% - 20px); /* 5 cards per row */
+  aspect-ratio: 1 / 1;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s ease;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(214, 127, 255, 0.15);
+  position: relative;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px var(--accent-color);
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover::before {
+  box-shadow: 0 0 30px var(--accent-color);
+  opacity: 1;
+}
+
+.skill-icon {
+  font-size: 42px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  padding: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px var(--accent-color);
+  /* color: #fff; */
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 25px var(--accent-color);
+}
+
+.skill-card p {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =======================================================
+   ✅ Responsive Design
+   ======================================================= */
+
+@media (max-width: 992px) {
+  .skill-card {
+    flex: 0 0 calc(33.33% - 20px); /* 3 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-card {
+    flex: 0 0 calc(50% - 15px); /* 2 per row */
+  }
+}
+
