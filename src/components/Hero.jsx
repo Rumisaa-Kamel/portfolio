@@ -84,7 +84,7 @@ export default function Hero() {
            {/* Social Icons */}
           <div className="hero-social">
             <a href="https://wa.me/201282917996" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
-            <a href="https://www.linkedin.com/in/rumisaa-kamel-008664371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+            <a href="https://www.linkedin.com/in/rumisaa-kamel-008664371/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
             <a href="https://www.facebook.com/share/1Ch9TM88bC/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
             <a href="https://github.com/Rumisaa-Kamel" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
           </div>
